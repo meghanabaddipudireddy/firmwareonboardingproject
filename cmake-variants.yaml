@@ -1,0 +1,25 @@
+buildType:
+  default: Develop
+  choices:
+    Develop:
+      short: Develop
+      long: Emit debug information but also optimize
+      buildType: Develop
+    Debug:
+      short: Debug
+      long: Emit debug information and don't optimize
+      buildType: Debug
+    Release:
+      short: Release
+      long: Optimize generated code
+      buildType: Release
+board:
+  # Replace YOUR_MBED_TARGET with your board’s actual name, e.g. NUCLEO_L452RE_P
+  default: NUCLEO_L432KC
+  choices:
+    NUCLEO_L432KC:
+      short: NUCLEO_L432KC
+      settings:
+        MBED_TARGET: NUCLEO_L432KC
+        # Replace YOUR_UPLOAD_METHOD with one from the Mbed wiki (e.g. STLINK, JLINK, PYOCD, etc.)
+        UPLOAD_METHOD: MBED
